@@ -1,0 +1,63 @@
+.home-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Animated gradient background */
+.animated-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #42e695);
+  background-size: 600% 600%;
+  animation: gradientMove 10s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Title text styling */
+.title-text {
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Buttons with glow effect */
+.btn-green, .btn-red, .btn-gray {
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-green { background-color: #34d399; }
+.btn-green:hover { background-color: #10b981; transform: scale(1.05); box-shadow: 0 0 20px #34d399; }
+
+.btn-red { background-color: #f87171; }
+.btn-red:hover { background-color: #ef4444; transform: scale(1.05); box-shadow: 0 0 20px #f87171; }
+
+.btn-gray { background-color: #6b7280; }
+.btn-gray:hover { background-color: #4b5563; transform: scale(1.05); box-shadow: 0 0 20px #9ca3af; }
+
+/* Counter glow animation */
+.counter-text {
+  animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff; }
+  50% { text-shadow: 0 0 20px #fff, 0 0 30px #fff; }
+  100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff; }
+}
